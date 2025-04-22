@@ -14,7 +14,7 @@ export default function DestinosPopulares() {
           <Icon name="menu" type="material-icons" size={24} />
         </TouchableOpacity>
       </View>
-      <View style={styles.imageContainer}>
+      <View style={styles.imageContainerDestinos}>
         <Image 
           source={bahia} 
           style={styles.avatar} 
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   menuButton: {
     marginRight: 15,
   },
-  imageContainer: {
+  imageContainerDestinos: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',

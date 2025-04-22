@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import { Icon } from 'react-native-elements';
 import ChatHeader from '../components/Contatos/ChatHeader';
 import CardMensagem from '../components/Contatos/CardMensagem';
 import NavBar from '../components/Contatos/NavBar';
@@ -60,6 +61,19 @@ export default function PagChat() {
   return (
     <View style={styles.container}>
       <ChatHeader />
+      <View style={styles.textos}>
+        <Text style={styles.title}>Marcar tudo como lido</Text>
+        <View style={styles.sortContainer}>
+          <Text style={styles.title}>Classificar por</Text>
+          <Icon 
+            name="caret-down" 
+            type="font-awesome" 
+            size={12} 
+            color="#4F46E5" 
+            style={styles.sortIcon}
+          />
+        </View>
+      </View>
       <ScrollView style={styles.scroll}>
         {messages.map((msg, index) => (
           <CardMensagem key={index} {...msg} />
@@ -77,5 +91,24 @@ const styles = StyleSheet.create({
   },
   scroll: {
     padding: 15,
+  },
+  textos: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: 'space-between', 
+    margin: 20,
+    alignItems: 'center',
+  },
+  title: {
+    color: '#4F46E5',
+    fontWeight: 'bold',
+    fontSize: 10,
+  },
+  sortContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  sortIcon: {
+    marginLeft: 5,
   },
 });
