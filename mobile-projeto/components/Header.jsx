@@ -1,8 +1,18 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Avatar, Icon } from 'react-native-elements';
+import React, { useEffect, useState} from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
+import { Icon } from 'react-native-elements';
 
 export default function Header() {
+  const [usuarios, setUsuarios] = useState([])
+  console.log(usuarios)
+
+  useEffect(() => {
+    fetch('http://localhost:3001/usuarios')
+    .then(res => res.json())
+    .then(data => setUsuarios(data))
+    .catch(err => console.error(err));
+  }, []);
+
   return (
     <View style={styles.headerContainer}>
       <View style={styles.statusBar}>
@@ -13,18 +23,15 @@ export default function Header() {
         </View>
       </View>
 
-      <View style={styles.mainHeader}>
-        <Avatar
-          rounded
-          source={{ uri: 'https://randomuser.me/api/portraits/men/32.jpg' }}
-          size="medium"
-          containerStyle={styles.avatar}
-        />
-        <View>
-          <Text style={styles.welcome}>Bem Vindo</Text>
-          <Text style={styles.name}>Dani Martinez</Text>
+;     {usuarios.map((doc, i) => (
+        <View key={i} style={styles.mainHeader}>
+          <Image source={{ uri: doc.img }} style={styles.avatar} />
+          <View>
+            <Text style={styles.welcome}>Bem Vindo</Text>
+            <Text style={styles.name}>{doc.nome}</Text>
+          </View>
         </View>
-      </View>
+      ))}
     </View>
   );
 }
@@ -58,6 +65,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
     marginRight: 15,
   },
   welcome: {

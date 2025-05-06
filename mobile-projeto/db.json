@@ -1,0 +1,72 @@
+{
+    "doctors": [
+      {
+        "id": 1,
+        "nome": "Dra. Carla Sofia Santino",
+        "especialidade": "Cardiologista",
+        "descricao": "Especialista em doenças do coração com mais de 10 anos de experiência.",
+        "imagem": "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      {
+        "id": 2,
+        "nome": "Dr. João Pedro Silva",
+        "especialidade": "Dermatologista",
+        "descricao": "Atendimento dermatológico completo para adultos e crianças.",
+        "imagem": "https://randomuser.me/api/portraits/men/52.jpg"
+      },
+      {
+        "id": 3,
+        "nome": "Dra. Arliany Santana de Souza",
+        "especialidade": "Pediatra",
+        "descricao": "Especialista em Pediatria",
+        "imagem": "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      {
+        "id": 4,
+        "nome": "Dr. Victor Fernando Novais",
+        "especialidade": "Clinico Geral",
+        "descricao": "Atendimento dermatológico completo para adultos e crianças.",
+        "imagem": "https://randomuser.me/api/portraits/men/52.jpg"
+      }
+    ],
+    "usuarios": [
+      {
+        "id": 1,
+        "nome": "Carlos Eduardo",
+        "img": "https://randomuser.me/api/portraits/men/32.jpg"
+      }
+    ],
+    "categorias": [
+      {
+        "id": 1,
+        "name": "Consultas",
+        "icon": "user-md"
+      },
+      { 
+        "id": 2,
+        "name": "Dentista", 
+        "icon": "tooth"
+      },
+      {
+        "id": 3,
+        "name": "Cardiologista", 
+        "icon": "heartbeat" 
+      },
+      { 
+        "id": 4,
+        "name": "Hospital", 
+        "icon": "hospital" 
+      },
+      { 
+        "id": 5,
+        "name": "Emergencia", 
+        "icon": "ambulance" 
+      },
+      { 
+        "id": 6,
+        "name": "Laboratorio", 
+        "icon": "flask" 
+      }
+    ]
+  }
+  
